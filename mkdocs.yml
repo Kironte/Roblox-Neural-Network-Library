@@ -1,0 +1,53 @@
+site_name: Roblox NN Library Documentation
+site_description: The official documentation for the Roblox Neural Network Library
+site_author: Kironte
+repo_url: https://github.com/Kironte/Roblox-Neural-Network-Library
+extra_css:
+  - css/extra2.css
+extra_javascript:
+  - js/extra2.js
+theme:
+  name: material
+  features:
+    - navigation.tabs
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Introduction: intro.md
+  - Installation: install.md
+  - Example Code: exampleCode.md
+  - API Documentation:
+    - BackPropagator:
+      - BackPropagator: documentation/BackPropagator.md
+      - LSTMBackPropagator: documentation/LSTMBackPropagator.md
+    - GeneticAlgorithm:
+      - GeneticAlgorithm: documentation/GeneticAlgorithm.md
+      - ParamEvo: documentation/ParamEvo.md
+    - NeuralNetwork:
+      - NeuralNetwork: documentation/NeuralNetwork.md
+      - LSTMNetwork: documentation/LSTMNetwork.md
+      - FeedforwardNetwork:
+        - FeedforwardNetwork: documentation/FeedforwardNetwork.md
+        - GateNetwork: documentation/GateNetwork.md
+    - Node:
+      - Node: documentation/Node.md
+      - InputNode: documentation/InputNode.md
+      - OutputNode: documentation/OutputNode.md
+      - LSTMNode: documentation/LSTMNode.md
+    - Optimizer:
+      - Optimizer: documentation/Optimizer.md
+      - StochasticGradientDescent: documentation/StochasticGradientDescent.md
+      - AdaGrad: documentation/AdaGrad.md
+      - Momentum: documentation/Momentum.md
+      - RMSprop: documentation/RMSprop.md
+      - Adam: documentation/Adam.md
+    - ActivationFunction: documentation/ActivationFunction.md
+    - NodeLayer: documentation/NodeLayer.md
+    - Synapse: documentation/Synapse.md
+
+markdown_extensions:
+  - codehilite
+  - admonition
