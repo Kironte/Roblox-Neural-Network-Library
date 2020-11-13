@@ -1,0 +1,49 @@
+.function table {
+    border: 0;
+    box-sizing: border-box;
+    display: table !important;
+}
+
+.function tbody tr td {
+    display: block;
+    border: 1px solid #9ca7add3 !important;
+    
+}
+
+.function div {
+    width: 100%;
+}
+
+.function tbody tr td:first-child {
+    border-bottom: 0 !important;
+}
+
+.container {
+    font-size: 22px;
+}
+
+.type {
+    color: rgba(52, 138, 52, 0.836) !important;
+}
+
+.value {
+    color: #667580 !important;
+}
+
+.name {
+    color: #6761A8 !important;
+    display: inline;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.variable {
+    color: #667580 !important;
+}
+
+.variable:hover {
+    color: #2e495c !important;
+    font-weight: bold;
+}
