@@ -3,7 +3,7 @@ Designed and written in it's entirety by Kironte (roblox.com/users/49703460/prof
 Made for the Roblox Neural Network Library.
 For documentation and the open source license, refer to: github.com/Kironte/Roblox-Neural-Network-Library
 
-Last updated 10/13/2020
+Last updated 11/13/2020
 ]]
 
 local Package = script:FindFirstAncestorOfClass("Folder")
@@ -114,7 +114,7 @@ function FeedforwardNetwork.new(inputNamesArray,numberOfLayers,numberOfNodesPerL
 	end
 	
 	obj.BackPropagator = BackPropagator.new(obj)
-	if default.randomizeWeights then
+	if default.RandomizeWeights then
 		obj:RandomizeWeights()
 	end
 	

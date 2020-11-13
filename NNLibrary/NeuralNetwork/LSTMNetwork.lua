@@ -3,7 +3,7 @@ Designed and written in it's entirety by Kironte (roblox.com/users/49703460/prof
 Made for the Roblox Neural Network Library.
 For documentation and the open source license, refer to: github.com/Kironte/Roblox-Neural-Network-Library
 
-Last updated 10/13/2020
+Last updated 11/13/2020
 ]]
 
 local Package = script:FindFirstAncestorOfClass("Folder")
@@ -58,8 +58,8 @@ function LSTMNetwork.new(inputNamesArray,numberOfLSTMLayers,numberOfLSTMNodesPer
 		local nodeLayer = NodeLayer.new()
 		
 		for nodeNumber = 1, numberOfLSTMNodesPerLayer do
-			local numOfInputs = default.numOfInputsForLSTMUnits[nodeNumber] or default.numOfInputsForLSTMUnits.Default
-			local LSTMnode = LSTMNode.new(default.hiddenActivationName,default.bias,default.learningRate,nil,nil,numOfInputs)
+			local numOfInputs = default.NumOfInputsForLSTMUnits[nodeNumber] or default.NumOfInputsForLSTMUnits.Default
+			local LSTMnode = LSTMNode.new(default.HiddenActivationName,default.Bias,default.LearningRate,nil,nil,numOfInputs)
 			nodeLayer:AddNodes(LSTMnode)
 			obj:AddHiddenNode(LSTMnode)
 			
@@ -85,10 +85,10 @@ function LSTMNetwork.new(inputNamesArray,numberOfLSTMLayers,numberOfLSTMNodesPer
 		obj.Layers[layerNumber] = nodeLayer
 	end
 	
-	if default.makeDenseLayer then
+	if default.MakeDenseLayer then
 		local denseLayer = NodeLayer.new()
 		for nodeNumber = 1, numberOfLSTMNodesPerLayer do
-			local node = Node.new(default.hiddenActivationName,default.bias,default.learningRate)
+			local node = Node.new(default.HiddenActivationName,default.Bias,default.LearningRate)
 			denseLayer:AddNodes(node)
 			obj:AddHiddenNode(node)
 			
@@ -100,10 +100,10 @@ function LSTMNetwork.new(inputNamesArray,numberOfLSTMLayers,numberOfLSTMNodesPer
 	end
 	
 	for k,outputName in ipairs(outputNamesArray) do
-		local outputNode = OutputNode.new(default.outputActivationName,outputName,default.bias,default.learningRate)
+		local outputNode = OutputNode.new(default.OutputActivationName,outputName,default.Bias,default.LearningRate)
 		obj:AddOutputNode(outputNode)
 		
-		if not default.makeDirectOutput then
+		if not default.MakeDirectOutput then
 			for _,layerNode in pairs(obj.Layers[#obj.Layers]:GetNodes()) do
 				obj:ConnectNodes(layerNode,outputNode)
 			end
@@ -117,7 +117,7 @@ function LSTMNetwork.new(inputNamesArray,numberOfLSTMLayers,numberOfLSTMNodesPer
 	end
 	
 	obj.BackPropagator = LSTMBackPropagator.new(obj)
-	if default.randomizeWeights then
+	if default.RandomizeWeights then
 		obj:RandomizeWeights()
 	end
 	

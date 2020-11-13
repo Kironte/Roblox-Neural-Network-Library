@@ -3,7 +3,7 @@ Designed and written in it's entirety by Kironte (roblox.com/users/49703460/prof
 Made for the Roblox Neural Network Library.
 For documentation and the open source license, refer to: github.com/Kironte/Roblox-Neural-Network-Library
 
-Last updated 10/13/2020
+Last updated 11/13/2020
 ]]
 
 local Package = script:FindFirstAncestorOfClass("Folder")
@@ -58,6 +58,10 @@ end
 
 function GeneticAlgorithm:GetPopulation()
 	return self.Population
+end
+
+function GeneticAlgorithm:GetBestNetwork()
+	return self:GetPopulation()[1].Network
 end
 
 function GeneticAlgorithm:AddNetwork(network)

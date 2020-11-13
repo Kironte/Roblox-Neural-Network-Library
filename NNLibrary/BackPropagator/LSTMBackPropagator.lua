@@ -3,7 +3,7 @@ Designed and written in it's entirety by Kironte (roblox.com/users/49703460/prof
 Made for the Roblox Neural Network Library.
 For documentation and the open source license, refer to: github.com/Kironte/Roblox-Neural-Network-Library
 
-Last updated 10/13/2020
+Last updated 11/13/2020
 ]]
 
 local Package = script:FindFirstAncestorOfClass("Folder")
@@ -130,6 +130,7 @@ end
 
 
 function LSTMBackPropagator:Learn()
+	
 	local network = self.NeuralNetwork
 	local optimizer = network:GetOptimizer()
 	
@@ -151,7 +152,6 @@ function LSTMBackPropagator:Learn()
 				else
 					inNodeValue = inNode:GetValue()
 				end 
-				
 				synapse:AddWeight(optimizer:Calculate(node,inNodeValue,nil,synapse:GetID()))
 			end
 			--Bias

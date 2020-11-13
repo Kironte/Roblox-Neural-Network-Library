@@ -3,7 +3,7 @@ Designed and written in it's entirety by Kironte (roblox.com/users/49703460/prof
 Made for the Roblox Neural Network Library.
 For documentation and the open source license, refer to: github.com/Kironte/Roblox-Neural-Network-Library
 
-Last updated 10/13/2020
+Last updated 11/13/2020
 ]]
 
 local Package = script:FindFirstAncestorOfClass("Folder")
@@ -43,7 +43,7 @@ function NeuralNetwork.new(customSettings)
 	obj.Synapses = {}
 	obj.OutputValues = {}
 	obj.BackPropagator = nil
-	obj.Optimizer = default.Optimizer
+	obj.Optimizer = default.Optimizer.new(unpack(default.Optimizer.CreationVariables))
 	obj.Optimizer:SetNetwork(obj)
 	obj.SoftMax = default.SoftMax
 	
