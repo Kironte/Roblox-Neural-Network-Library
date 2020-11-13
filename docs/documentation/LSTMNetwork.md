@@ -1,6 +1,6 @@
 # **LSTMNetwork Class**
-!!! failure "Unusable"
-	As far as I can tell, my LSTM implementation is a complete failure. It does not achieve any measurable success or advantage over feedforward networks and cannot predict even simple number sequences. The internet has little to no readable information on the inner mathematical workings of LSTMs since few have the interest of creating new libraries, so I have no way of knowing how a true LSTM behaves internally. Sorry for the inconvenience.
+!!! failure "Unreliable"
+	As far as I can tell, my LSTM implementation is a complete failure. It does not achieve any measurable success or advantage over feedforward networks and cannot predict even simple number sequences. The internet has little to no readable information on the inner mathematical workings of LSTMs since few have the interest of creating new libraries, so I have no way of knowing how a true LSTM behaves internally. Feel free to try it but I can't give any guarantees.
 
 This class is responsible for constructing and managing LSTM (long short term memory) networks. This type of network is specialized for extrapolating a datapoint that would continue the series of given datapoints. A common application of this is text generation, though it can be applied to any scenario where there is a sequence that needs to be continued.
 
