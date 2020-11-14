@@ -74,6 +74,16 @@ Returns the ActivationFunction object of the gate node.
 <i>Only unchanged and unmodified functions are listed below.</i>
 
 <div class=functionDoc>
+NeuralNetwork .newFromSave(string serial)
+Deserializes and returns the neural network from the !serial! string: the save string.
+</div>
+
+<div class=functionDoc>
+string :Save()
+Returns the serialized form of the neural network as a string, allowing you to save the network.
+</div>
+
+<div class=functionDoc>
 void :SetBiases(number bias)
 Sets the bias of every node to !bias!.
 </div>

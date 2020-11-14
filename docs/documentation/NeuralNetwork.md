@@ -16,8 +16,8 @@ local customSettings {
 </div>
 
 <div class=functionDoc>
-void :ConnectNodes(Node inNode, Node outNode, bool checkOveride=false)
-Creates a synapse for the 2 nodes with !inNode! as the input and !outNode! as the output. If !checkOveride! is true, this function will not check if the synapse between these 2 nodes already exists; this is purely for internal performance purposes where the check is unnecessary. Do not set this to true if you are experimenting unless you're confident.
+NeuralNetwork .newFromSave(string serial)
+Deserializes and returns the neural network from the !serial! string: the save string.
 </div>
 
 <div class=functionDoc>
@@ -29,6 +29,16 @@ This function is fired when the NeuralNetwork object is called, such as:
 ```lua
 neuralNetwork:({Input1 = 0.5, Input2 = -0.2})
 ```
+</div>
+
+<div class=functionDoc>
+string :Save()
+Returns the serialized form of the neural network as a string, allowing you to save the network.
+</div>
+
+<div class=functionDoc>
+void :ConnectNodes(Node inNode, Node outNode, bool checkOveride=false)
+Creates a synapse for the 2 nodes with !inNode! as the input and !outNode! as the output. If !checkOveride! is true, this function will not check if the synapse between these 2 nodes already exists; this is purely for internal performance purposes where the check is unnecessary. Do not set this to true if you are experimenting unless you're confident.
 </div>
 
 <div class=functionDoc>

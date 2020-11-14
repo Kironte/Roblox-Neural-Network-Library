@@ -50,6 +50,17 @@ function NeuralNetwork.new(customSettings)
 	return obj
 end
 
+function NeuralNetwork.newFromSave(serial)
+	Base.Assert(serial,"string")
+	
+	local obj = Base.DeSerialize(serial,{_Package = Package})
+	return obj
+end
+
+function NeuralNetwork:Save()
+	return self:Serialize()
+end
+
 function NeuralNetwork:ConnectNodes(inNode,outNode,checkOveride)
 	--Base.Assert(inNode,"Node",outNode,"Node",checkOveride,"boolean OPT")
 	
