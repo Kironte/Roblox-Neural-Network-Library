@@ -58,7 +58,7 @@ function NeuralNetwork.newFromSave(serial)
 end
 
 function NeuralNetwork:Save()
-	return self:Serialize()
+	return self:Serialize(true)
 end
 
 function NeuralNetwork:ConnectNodes(inNode,outNode,checkOveride)
